@@ -1,5 +1,7 @@
 # Zoommer Home Page Clone
 
+Live: [here](https://gp-zoommer-clone-home-page.netlify.app)
+
 A pixel-perfect clone of the Zoommer homepage, built to practice HTML, CSS, and JavaScript skills. This project aims to replicate the design and functionality of the original Zoommer homepage, providing a visually appealing and responsive user experience.
 
 ## Features
