@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoommer.ge</title>
+  <link rel="shortcut icon" href="./assets/icon/favicon.svg" type="image/x-icon">
+  <!-- * Bootstrap link * -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- * Custom link * -->
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <!-- * Fontawesome link * -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
+
+  <!-- * Swiper Link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- * Swiper script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- * Custom script * -->
+  <script src="./main.js" defer></script>
+</head>
+
+<body>
+
+  <header class="Sticky">
+    <div class="Container">
+      <div class="Left__Side">
+        <button class="Buttin__Menu__Open" buttin-open-navigation>
+          <i class="fas fa-bars"></i>
+        </button>
+        <img src="./assets/image/Logo-full-EN.svg" alt="" class="Logo">
+      </div>
+
+      <div class="Middle" Show__Main__Search="false" Active__Search__Result="false">
+        <div class="Main__Search__Wrapper" >
+          <input type="text" placeholder="Search Store" class="Input__Main__Search" Input-Main__Search>
+
+          <button class="Buttin__Category__Dropdown" Buttin-Category__Dropdown Active__Dropdown="false">
+            <input type="text" class="Input__Category__Dropdown" placeholder="Category" Input-Category__Dropdown>
+            <i class="fa fa-caret-down"></i>
+
+            <div class="Custom__Dropdown__Menu__Wrapper">
+              <ul class="Custom__Dropdown__Menu" Custom__Dropdown__Menu>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+                <li class="Dropdown__Item">Item</li>
+              </ul>
+            </div>
+          </button>
+
+          <button class="Buttin__Main__Search" Buttin-Main__Search>
+            <i class="fa fa-search"></i>
+          </button>
+
+          <div class="Main__Search__Result__Block">
+            <div class="Result__Block__List" Search__Result__Block Product__NotFound="false">
+
+              <div class="Result__Item">
+                <div class="Result__Product__Image">
+                  <img src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                </div>
+                <div class="Result__Product__Title-Price">
+                  <h3>Xiaomi 12 5G 8/256GB Gray</h3>
+                  <div class="Result__Product__Prices">
+                    <span class="Old__Price">1899₾</span>
+                    <span class="New__Price">1699₾</span>
+                  </div>
+                </div>
+              </div>
+              <div class="Result__Item">
+                <div class="Result__Product__Image">
+                  <img src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                </div>
+                <div class="Result__Product__Title-Price">
+                  <h3>Xiaomi 12 5G 8/256GB Gray</h3>
+                  <div class="Result__Product__Prices">
+                    <span class="Old__Price">1899₾</span>
+                    <span class="New__Price">1699₾</span>
+                  </div>
+                </div>
+              </div>
+              <div class="Result__Item">
+                <div class="Result__Product__Image">
+                  <img src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                </div>
+                <div class="Result__Product__Title-Price">
+                  <h3>Xiaomi 12 5G 8/256GB Gray</h3>
+                  <div class="Result__Product__Prices">
+                    <span class="Old__Price">1899₾</span>
+                    <span class="New__Price">1699₾</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="Search__Text__Not__Found">We found <b>0 Product for</b> <span Search__Query></span></div>
+            </div>
+            <div class="Button__See__All__Wrapper">
+              <button class="Button__See__All" Button-See__All>See All</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="Overlay" Overlay></div>
+      </div>
+
+      <div class="Right__Side">
+        <button class="Buttin__Main__Search__Open" Buttin-Main__Search__Open>
+          <i class="fa fa-search"></i>
+          <i class="fa fa-times"></i>
+        </button>
+
+        <div class="User__Profile" show-auth-form-container="false">
+          <button class="Buttin__User__Profile " button-open-auth-form>
+            <i class="far fa-user-large"></i>
+            <span>Profile info</span>
+          </button>
+          <div class="User__Profile__Dropdown__Menu" Header__Form Form__Active__Name="Sign__In">
+            <form action="#" class="Form Sign__In">
+              <div class="Form__Title">
+                <h4>Welcome, Please Sign In!</h4>
+              </div>
+
+              <label for="Sign__In__Email__Input" class="Label__Wrapper">
+                <input type="email" placeholder="Email" Input-Sign__In__Email id="Sign__In__Email__Input" Value__Required="Please enter your email" value="">
+                <div class="Icons">
+                  <i class="far fa-user"></i>
+                </div>
+              </label>
+
+              <label for="Sign__In__Password__Input" class="Label__Wrapper">
+                <input type="password" placeholder="Password" Input-Sign__In__Password id="Sign__In__Password__Input" Value__Required="Password is required." value="">
+                <div class="Icons">
+                  <i class="far fa-lock"></i>
+                </div>
+              </label>
+
+              <div class="Forgot__Password__Link">
+                <a class="Button__Forgot__Password" Button-Forgot__Password>Forgot Password?</a>
+              </div>
+
+              <div class="Buttons__Authorisation__Registration">
+                <button type="submit" class="Orange__Btn Button__Login js-Login__Btn" Button-Login>Log in</button>
+                <button type="button" class="Button__Registration__Link" Button-Registration__Link>Register</button>
+              </div>
+
+              <div class="Or">- or -</div>
+
+              <div class="Authorisation__Registration__With__FB">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                  <span>Authorization</span>
+                </a>
+              </div>
+            </form>
+            <form action="#" class="Form Sign__Up">
+              <div class="Form__Title">
+                <button type="button" class="Button__Back fa fa-angle-left" Button-Form__Back></button>
+                <h4>Register</h4>
+              </div>
+
+              <label for="Sign__Up__Email__Input" class="Label__Wrapper">
+                <input type="email" placeholder="Email" Input-Sign__Up__Email id="Sign__Up__Email__Input" Value__Required="Please enter your email" value="">
+                <div class="Icons">
+                  <i class="far fa-user"></i>
+                </div>
+              </label>
+
+              <label for="Sign__Up__Password__Input" class="Label__Wrapper">
+                <input type="password" placeholder="Password" Input-Sign__Up__Password id="Sign__Up__Password__Input" Value__Required="Password is required." value="">
+                <div class="Icons">
+                  <i class="far fa-lock"></i>
+                </div>
+              </label>
+
+              <label for="Sign__Up__Confirm__Password__Input" class="Label__Wrapper">
+                <input type="password" placeholder="Confirm Password" Input-Sign__Up__Confirm__Password id="Sign__Up__Confirm__Password__Input"  Value__Required="The password and confirmation password do not match." value="" >
+                <div class="Icons">
+                  <i class="far fa-lock"></i>
+                </div>
+              </label>
+
+              <label for="Agreed__Terms" class="Checkbox__Lable">
+                <input type="checkbox" Input-Agreed__Terms Value__Required="The Agree Terms And Conditions field is required." id="Agreed__Terms" Value="true" >
+                <a>Agree Terms And Conditions</a>
+              </label>
+
+              <div class="Buttons__Authorisation__Registration">
+                <button type="submit" class="Orange__Btn Button__Register js-Register__Btn">Register</button>
+              </div>
+
+              <div class="Or">- or -</div>
+
+              <div class="Authorisation__Registration__With__FB">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                  <span>Authorization</span>
+                </a>
+              </div>
+            </form>
+            <form action="#" class="Form Sign__Pass">
+              <div class="Form__Title">
+                <button type="button" class="Button__Back fa fa-angle-left" Button-Form__Back></button>
+                <h4>Password recovery</h4>
+              </div>
+
+              <label for="Recover__Email__Input" class="Label__Wrapper">
+                <input type="email" placeholder="Email" Input-Recover__Email id="Recover__Email__Input" Value__Required="Wrong email!" value="">
+                <div class="Icons">
+                  <i class="far fa-envelope"></i>
+                </div>
+              </label>
+
+              <div class="Buttons__Authorisation__Registration">
+                <button type="submit" class="Orange__Btn Button__Recover js-Recover__Btn">Recover</button>
+              </div>
+            </form>
+
+            <script>
+              const Header__Form = document.querySelector("[Header__Form]");
+              const Button__Form__Back = document.querySelectorAll("[Button-Form__Back]");
+              const Button__Registration__Link = document.querySelector("[Button-Registration__Link]");
+              const Button__Forgot__Password = document.querySelector("[Button-Forgot__Password]");
+
+              Button__Form__Back.forEach(button => {
+                button.onclick = () => Header__Form.setAttribute("Form__Active__Name", "Sign__In");
+              });
+              Button__Registration__Link.onclick = () => Header__Form.setAttribute("Form__Active__Name", "Sign__Up");
+              Button__Forgot__Password.onclick = () => Header__Form.setAttribute("Form__Active__Name", "Sign__Pass");
+            </script>
+          </div>
+          <div class="Overlay" Overlay></div>
+        </div>
+
+        <div class="Header__Basket__Container" Header-Basket-Container="inactive" >
+          <button class="Button__Header__Basket" button-show-cart Cart__Count="3">
+            <i class="far fa-shopping-cart"></i>
+            <span class="Cart__Price">6 120 ₾</span>
+          </button>
+
+          <div class="User__Cart__Dropdown__Menu">
+            <div class="Cart__Dropdown__Title">
+              <h2>Shopping Cart</h2>
+              <button class="button-close" button-close-cart>
+                <i class="fa fa-times"></i>
+              </button>
+            </div>
+
+            <div class="Cart__Dropdown__Product__Items">
+              <div class="Product__Item">
+                <div class="Product__Left__Side">
+                  <button class="Button__Product__Remove" Button-Cart__Product__Remove>
+                    <i class="fa fa-times"></i>
+                  </button>
+                  <div class="Product__Image">
+                    <img src="./assets/image/Navigation/Image-Tab.png" alt="" class="Image">
+                  </div>
+                </div>
+                <div class="Product__Right__Side">
+                  <h6 class="Product__Name">Apple iPhone 14 Pro | 128GB Deep Purple</h6>
+                  <div class="Cart__Dropdown__Price__Wrapper">
+                    <div class="Cart__Dropdown__Quantity">
+                      <button>-</button>
+                      <input type="number" value="1" step="1" min="1">
+                      <button>+</button>
+                    </div>
+                    <span class="Cart__Dropdown__Price">2 299 ₾</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="Product__Item">
+                <div class="Product__Left__Side">
+                  <button class="Button__Product__Remove" Button-Cart__Product__Remove>
+                    <i class="fa fa-times"></i>
+                  </button>
+                  <div class="Product__Image">
+                    <img src="./assets/image/Navigation/Image-Laptop.png" alt="" class="Image">
+                  </div>
+                </div>
+                <div class="Product__Right__Side">
+                  <h6 class="Product__Name">Apple iPhone 14 Pro | 128GB Deep Purple</h6>
+                  <div class="Cart__Dropdown__Price__Wrapper">
+                    <div class="Cart__Dropdown__Quantity">
+                      <button>-</button>
+                      <input type="number" value="1" step="1" min="1">
+                      <button>+</button>
+                    </div>
+                    <span class="Cart__Dropdown__Price">2 299 ₾</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="Product__Item">
+                <div class="Product__Left__Side">
+                  <button class="Button__Product__Remove" Button-Cart__Product__Remove>
+                    <i class="fa fa-times"></i>
+                  </button>
+                  <div class="Product__Image">
+                    <img src="./assets/image/Navigation/Image-Gaming.png" alt="" class="Image">
+                  </div>
+                </div>
+                <div class="Product__Right__Side">
+                  <h6 class="Product__Name">Apple iPhone 14 Pro | 128GB Deep Purple</h6>
+                  <div class="Cart__Dropdown__Price__Wrapper">
+                    <div class="Cart__Dropdown__Quantity">
+                      <button>-</button>
+                      <input type="number" value="1" step="1" min="1">
+                      <button>+</button>
+                    </div>
+                    <span class="Cart__Dropdown__Price">2 299 ₾</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="Cart__Dropdown__Total__Price">
+              <h3 class="Total__Price">Sub-Total: <span Cart__Dropdown__Total__Price> 1 245 ₾</span></h3>
+            </div>
+
+            <button class="Button__GoTo__Cart" Button-GoTo__Cart>Go To Cart</button>
+
+          </div>
+          <div class="Overlay" Overlay></div>
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <aside aside-active="false">
+    <div class="container" >
+      <div class="aside-header">
+        <h2 class="aside-header-title">Navigations</h2>
+        <button button-close-aside>
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+      <ul class="aside-top-navigation">
+        <li navigation-target="Mobile" active="true">
+          <i class="far fa-mobile"></i>
+          <span>Phones</span>
+        </li>
+        <li navigation-target="Tabs" active="false">
+          <i class="far fa-headphones"></i>
+          <span>Accessories</span>
+        </li>
+        <li navigation-target="Laptops" active="false">
+          <i class="far fa-laptop"></i>
+          <span>Laptops</span>
+        </li>
+        <li navigation-target="Audio" active="false">
+          <i class="far fa-music-note"></i>
+          <span>Audio</span>
+        </li>
+        <li navigation-target="Gaming" active="false">
+          <i class="far fa-gamepad-modern"></i>
+          <span>Gaming</span>
+        </li>
+        <li navigation-target="TV" active="false">
+          <i class="far fa-tv"></i>
+          <span>TV</span>
+        </li>
+        <li navigation-target="Digitals" active="false">
+          <i class="far fa-camera"></i>
+          <span>Camera</span>
+        </li>
+        <li navigation-target="Home" active="false">
+          <i class="far fa-home"></i>
+          <span>Home</span>
+        </li>
+      </ul>
+      <div class="aside-navigation-category-container" category-target-name="Mobile">
+        <ul class="category-list" category-name="Mobile">
+          <li class="category-title">Mobile Brands</li>
+          <li>
+            <a>Apple</a>
+          </li>
+          <li>
+            <a>Samsung</a>
+          </li>
+          <li>
+            <a>Xiaomi</a>
+          </li>
+          <li>
+            <a>Vivo</a>
+          </li>
+          <li>
+            <a>Google</a>
+          </li>
+          <li>
+            <a>Nothing</a>
+          </li>
+          <li>
+            <a>OnePlus</a>
+          </li>
+          <li>
+            <a>Realme</a>
+          </li>
+          <li>
+            <a>Nokia</a>
+          </li>
+          <li>
+            <a>Honor</a>
+          </li>
+          <li>
+            <a>ZTE</a>
+          </li>
+          <li>
+            <a>Asus</a>
+          </li>
+          <li>
+            <a>SkinX</a>
+          </li>
+        </ul>
+        <ul class="category-list" category-name="Tabs">
+          <li class="category-title">Tabs | Accessories</li>
+          <li>
+            <a>Apple</a>
+          </li>
+          <li>
+            <a>Samsung</a>
+          </li>
+          <li>
+            <a>Xiaomi</a>
+          </li>
+          <li>
+            <a>Vivo</a>
+          </li>
+          <li>
+            <a>Google</a>
+          </li>
+          <li>
+            <a>Nothing</a>
+          </li>
+          <li>
+            <a>OnePlus</a>
+          </li>
+          <li>
+            <a>Realme</a>
+          </li>
+          <li>
+            <a>Nokia</a>
+          </li>
+          <li>
+            <a>Honor</a>
+          </li>
+          <li>
+            <a>ZTE</a>
+          </li>
+          <li>
+            <a>Asus</a>
+          </li>
+          <li>
+            <a>SkinX</a>
+          </li>
+        </ul>
+        <ul class="category-list" category-name="Laptops">
+          <li class="category-title">IT | Laptops</li>
+          <li>
+            <a>Apple</a>
+          </li>
+          <li>
+            <a>Samsung</a>
+          </li>
+          <li>
+            <a>Xiaomi</a>
+          </li>
+          <li>
+            <a>Vivo</a>
+          </li>
+          <li>
+            <a>Google</a>
+          </li>
+          <li>
+            <a>Nothing</a>
+          </li>
+          <li>
+            <a>OnePlus</a>
+          </li>
+          <li>
+            <a>Realme</a>
+          </li>
+          <li>
+            <a>Nokia</a>
+          </li>
+          <li>
+            <a>Honor</a>
+          </li>
+          <li>
+            <a>ZTE</a>
+          </li>
+          <li>
+            <a>Asus</a>
+          </li>
+          <li>
+            <a>SkinX</a>
+          </li>
+        </ul>
+        <ul class="category-list" category-name="Audio">
+          <li class="category-title">Audio Systems</li>
+          <li>
+            <a>Apple</a>
+          </li>
+          <li>
+            <a>Samsung</a>
+          </li>
+          <li>
+            <a>Xiaomi</a>
+          </li>
+          <li>
+            <a>Vivo</a>
+          </li>
+          <li>
+            <a>Google</a>
+          </li>
+          <li>
+            <a>Nothing</a>
+          </li>
+          <li>
+            <a>OnePlus</a>
+          </li>
+          <li>
+            <a>Realme</a>
+          </li>
+          <li>
+            <a>Nokia</a>
+          </li>
+          <li>
+            <a>Honor</a>
+          </li>
+          <li>
+            <a>ZTE</a>
+          </li>
+          <li>
+            <a>Asus</a>
+          </li>
+          <li>
+            <a>SkinX</a>
+          </li>
+        </ul>
+        <ul class="category-list" category-name="Gaming">
+          <li class="category-title">Gaming</li>
+          <li>
+            <a>Apple</a>
+          </li>
+          <li>
+            <a>Samsung</a>
+          </li>
+          <li>
+            <a>Xiaomi</a>
+          </li>
+          <li>
+            <a>Vivo</a>
+          </li>
+          <li>
+            <a>Google</a>
+          </li>
+          <li>
+            <a>Nothing</a>
+          </li>
+          <li>
+            <a>OnePlus</a>
+          </li>
+          <li>
+            <a>Realme</a>
+          </li>
+          <li>
+            <a>Nokia</a>
+          </li>
+          <li>
+            <a>Honor</a>
+          </li>
+          <li>
+            <a>ZTE</a>
+          </li>
+          <li>
+            <a>Asus</a>
+          </li>
+          <li>
+            <a>SkinX</a>
+          </li>
+        </ul>
+        <ul class="category-list" category-name="TV">
+          <li class="category-title">TV | Monitors</li>
+          <li>
+            <a>Apple</a>
+          </li>
+          <li>
+            <a>Samsung</a>
+          </li>
+          <li>
+            <a>Xiaomi</a>
+          </li>
+          <li>
+            <a>Vivo</a>
+          </li>
+          <li>
+            <a>Google</a>
+          </li>
+          <li>
+            <a>Nothing</a>
+          </li>
+          <li>
+            <a>OnePlus</a>
+          </li>
+          <li>
+            <a>Realme</a>
+          </li>
+          <li>
+            <a>Nokia</a>
+          </li>
+          <li>
+            <a>Honor</a>
+          </li>
+          <li>
+            <a>ZTE</a>
+          </li>
+          <li>
+            <a>Asus</a>
+          </li>
+          <li>
+            <a>SkinX</a>
+          </li>
+        </ul>
+        <ul class="category-list" category-name="Digitals">
+          <li class="category-title">Digitals | Camera</li>
+          <li>
+            <a>Apple</a>
+          </li>
+          <li>
+            <a>Samsung</a>
+          </li>
+          <li>
+            <a>Xiaomi</a>
+          </li>
+          <li>
+            <a>Vivo</a>
+          </li>
+          <li>
+            <a>Google</a>
+          </li>
+          <li>
+            <a>Nothing</a>
+          </li>
+          <li>
+            <a>OnePlus</a>
+          </li>
+          <li>
+            <a>Realme</a>
+          </li>
+          <li>
+            <a>Nokia</a>
+          </li>
+          <li>
+            <a>Honor</a>
+          </li>
+          <li>
+            <a>ZTE</a>
+          </li>
+          <li>
+            <a>Asus</a>
+          </li>
+          <li>
+            <a>SkinX</a>
+          </li>
+        </ul>
+        <ul class="category-list" category-name="Home">
+          <li class="category-title">Smart Home</li>
+          <li>
+            <a>Apple</a>
+          </li>
+          <li>
+            <a>Samsung</a>
+          </li>
+          <li>
+            <a>Xiaomi</a>
+          </li>
+          <li>
+            <a>Vivo</a>
+          </li>
+          <li>
+            <a>Google</a>
+          </li>
+          <li>
+            <a>Nothing</a>
+          </li>
+          <li>
+            <a>OnePlus</a>
+          </li>
+          <li>
+            <a>Realme</a>
+          </li>
+          <li>
+            <a>Nokia</a>
+          </li>
+          <li>
+            <a>Honor</a>
+          </li>
+          <li>
+            <a>ZTE</a>
+          </li>
+          <li>
+            <a>Asus</a>
+          </li>
+          <li>
+            <a>SkinX</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="Overlay" Overlay></div>
+  </aside>
+
+  <main>
+    <section>
+      <div class="Navigation__Wrapper Container" Navigation__Wrapper>
+        <nav class="Navigation">
+          <div class="Navigation__Header">
+            <div class="Left__Side">
+              <i class="fa fa-list"></i>
+              <span>Navigation</span>
+            </div>
+            <div class="Right__Side">
+              <button class="Button__All" Button-Nav__All>All</button>
+            </div>
+          </div>
+
+          <div class="Navigation__Body">
+            <ul Navigation__List__Wrapper>
+              <li Navigation__List Nav__List__Active="false" Category__Nav__Name="Mobile">
+                <i class="far fa-mobile"></i>
+                <span>Mobile Phones</span>
+              </li>
+              <li Navigation__List Nav__List__Active="false" Category__Nav__Name="Accessories">
+                <i class="far fa-headphones"></i>
+                <span>Tabs | Accessories</span>
+              </li>
+              <li Navigation__List Nav__List__Active="false" Category__Nav__Name="Laptops">
+                <i class="far fa-laptop"></i>
+                <span>IT | Laptops</span>
+              </li>
+              <li Navigation__List Nav__List__Active="false" Category__Nav__Name="Audio">
+                <i class="far fa-music-note"></i>
+                <span>Audio Systems</span>
+              </li>
+              <li Navigation__List Nav__List__Active="false" Category__Nav__Name="Gaming">
+                <i class="far fa-gamepad-modern"></i>
+                <span>Gaming</span>
+              </li>
+              <li Navigation__List Nav__List__Active="false" Category__Nav__Name="Tv">
+                <i class="far fa-tv"></i>
+                <span>TV | Monitors</span>
+              </li>
+              <li Navigation__List Nav__List__Active="false" Category__Nav__Name="Digitals">
+                <i class="far fa-camera"></i>
+                <span>Digitals | Camera</span>
+              </li>
+              <li Navigation__List Nav__List__Active="false" Category__Nav__Name="Home">
+                <i class="far fa-colon"></i>
+                <span>Smart Home</span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="Navigation__Full__Categories" Category__Active="false" Category__Name="Mobile">
+          <div class="Left__Side">
+            <ul class="Category__Column">
+              <li class="Category__Title">Mobile Brands</li>
+              <li>Apple</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+              <li>Nothing</li>
+              <li>OnePlus</li>
+              <li>Realme</li>
+              <li>Nokia</li>
+              <li>Honor</li>
+              <li>ZTE</li>
+              <li>Asus</li>
+              <li>SkinX</li>
+            </ul>
+            <ul class="Category__Column">
+              <li class="Category__Title">Accessories For Mobile</li>
+              <li>Apple</li>
+              <li>Google</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+            </ul>
+          </div>
+          <div class="Right__Side">
+            <img src="./assets/image/Navigation/Image-Mobile.png" alt="">
+          </div>
+        </div>
+        <div class="Navigation__Full__Categories" Category__Active="false" Category__Name="Accessories">
+          <div class="Left__Side">
+            <ul class="Category__Column">
+              <li class="Category__Title">Mobile Brands</li>
+              <li>Apple</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+              <li>Nothing</li>
+              <li>OnePlus</li>
+              <li>Realme</li>
+              <li>Nokia</li>
+              <li>Honor</li>
+              <li>ZTE</li>
+              <li>Asus</li>
+              <li>SkinX</li>
+            </ul>
+            <ul class="Category__Column">
+              <li class="Category__Title">Accessories For Mobile</li>
+              <li>Apple</li>
+              <li>Google</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+            </ul>
+          </div>
+          <div class="Right__Side">
+            <img src="./assets/image/Navigation/Image-Tab.png" alt="">
+          </div>
+        </div>
+        <div class="Navigation__Full__Categories" Category__Active="false" Category__Name="Laptops">
+          <div class="Left__Side">
+            <ul class="Category__Column">
+              <li class="Category__Title">Mobile Brands</li>
+              <li>Apple</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+              <li>Nothing</li>
+              <li>OnePlus</li>
+              <li>Realme</li>
+              <li>Nokia</li>
+              <li>Honor</li>
+              <li>ZTE</li>
+              <li>Asus</li>
+              <li>SkinX</li>
+            </ul>
+            <ul class="Category__Column">
+              <li class="Category__Title">Accessories For Mobile</li>
+              <li>Apple</li>
+              <li>Google</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+            </ul>
+          </div>
+          <div class="Right__Side">
+            <img src="./assets/image/Navigation/Image-Laptop.png" alt="">
+          </div>
+        </div>
+        <div class="Navigation__Full__Categories" Category__Active="false" Category__Name="Audio">
+          <div class="Left__Side">
+            <ul class="Category__Column">
+              <li class="Category__Title">Mobile Brands</li>
+              <li>Apple</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+              <li>Nothing</li>
+              <li>OnePlus</li>
+              <li>Realme</li>
+              <li>Nokia</li>
+              <li>Honor</li>
+              <li>ZTE</li>
+              <li>Asus</li>
+              <li>SkinX</li>
+            </ul>
+            <ul class="Category__Column">
+              <li class="Category__Title">Accessories For Mobile</li>
+              <li>Apple</li>
+              <li>Google</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+            </ul>
+          </div>
+          <div class="Right__Side">
+            <img src="./assets/image/Navigation/Image-Audio.png" alt="">
+          </div>
+        </div>
+        <div class="Navigation__Full__Categories" Category__Active="false" Category__Name="Gaming">
+          <div class="Left__Side">
+            <ul class="Category__Column">
+              <li class="Category__Title">Mobile Brands</li>
+              <li>Apple</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+              <li>Nothing</li>
+              <li>OnePlus</li>
+              <li>Realme</li>
+              <li>Nokia</li>
+              <li>Honor</li>
+              <li>ZTE</li>
+              <li>Asus</li>
+              <li>SkinX</li>
+            </ul>
+            <ul class="Category__Column">
+              <li class="Category__Title">Accessories For Mobile</li>
+              <li>Apple</li>
+              <li>Google</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+            </ul>
+          </div>
+          <div class="Right__Side">
+            <img src="./assets/image/Navigation/Image-Gaming.png" alt="">
+          </div>
+        </div>
+        <div class="Navigation__Full__Categories" Category__Active="false" Category__Name="Tv">
+          <div class="Left__Side">
+            <ul class="Category__Column">
+              <li class="Category__Title">Mobile Brands</li>
+              <li>Apple</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+              <li>Nothing</li>
+              <li>OnePlus</li>
+              <li>Realme</li>
+              <li>Nokia</li>
+              <li>Honor</li>
+              <li>ZTE</li>
+              <li>Asus</li>
+              <li>SkinX</li>
+            </ul>
+            <ul class="Category__Column">
+              <li class="Category__Title">Accessories For Mobile</li>
+              <li>Apple</li>
+              <li>Google</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+            </ul>
+          </div>
+          <div class="Right__Side">
+            <img src="./assets/image/Navigation/Image-TV.png" alt="">
+          </div>
+        </div>
+        <div class="Navigation__Full__Categories" Category__Active="false" Category__Name="Digitals">
+          <div class="Left__Side">
+            <ul class="Category__Column">
+              <li class="Category__Title">Mobile Brands</li>
+              <li>Apple</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+              <li>Nothing</li>
+              <li>OnePlus</li>
+              <li>Realme</li>
+              <li>Nokia</li>
+              <li>Honor</li>
+              <li>ZTE</li>
+              <li>Asus</li>
+              <li>SkinX</li>
+            </ul>
+            <ul class="Category__Column">
+              <li class="Category__Title">Accessories For Mobile</li>
+              <li>Apple</li>
+              <li>Google</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+            </ul>
+          </div>
+          <div class="Right__Side">
+            <img src="./assets/image/Navigation/Image-Digital.png" alt="">
+          </div>
+        </div>
+        <div class="Navigation__Full__Categories" Category__Active="false" Category__Name="Home">
+          <div class="Left__Side">
+            <ul class="Category__Column">
+              <li class="Category__Title">Mobile Brands</li>
+              <li>Apple</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+              <li>Nothing</li>
+              <li>OnePlus</li>
+              <li>Realme</li>
+              <li>Nokia</li>
+              <li>Honor</li>
+              <li>ZTE</li>
+              <li>Asus</li>
+              <li>SkinX</li>
+            </ul>
+            <ul class="Category__Column">
+              <li class="Category__Title">Accessories For Mobile</li>
+              <li>Apple</li>
+              <li>Google</li>
+              <li>Samsung</li>
+              <li>Xiaomi</li>
+              <li>Vivo</li>
+              <li>Google</li>
+            </ul>
+          </div>
+          <div class="Right__Side">
+            <img src="./assets/image/Navigation/Image-Home.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="Main__Carousel__Wrapper Container">
+        <div class="swiper Main__Carousel" Main__Carousel>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/image/Main__Slide/slide-Image-1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/Main__Slide/slide-Image-2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/Main__Slide/slide-Image-3.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/Main__Slide/slide-Image-4.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/image/Main__Slide/slide-Image-5.png" alt="">
+            </div>
+
+          </div>
+
+          <div class="Slider__Nav__Buttons">
+            <div class="Button-Main__Slider__Next Button__Main__Slider">
+              <i class="fa fa-angle-right"></i>
+            </div>
+            <div class="Button-Main__Slider__Prev Button__Main__Slider">
+              <i class="fa fa-angle-left"></i>
+            </div>
+          </div>
+          <div class="Main__Pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="Container">
+
+        <div class="Section__Header">
+          <div class="Section__Header__Left__Side">
+            <div class="Section__Header__title__Icon">
+              <i class="far fa-fire"></i>
+            </div>
+
+            <h2 class="Section__Title">Hot Offers</h2>
+          </div>
+          <div class="Section__Header__Right__Side">
+            <button class="Button-All__Promotions">Promotions</button>
+          </div>
+        </div>
+
+        <div class="Section__Content HotOffers__Product__Container">
+
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="Product">
+            <div class="Product__Block">
+              <div class="Product__Top__Content">
+
+                <div class="Product__Label__Outside" Label__Color="LightBlue">
+                  <div class="Product__Label">Zoommer Prices</div>
+                </div>
+
+                <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                  <div class="swiper-wrapper Product__Image__Slider">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                  </div>
+
+                  <div class="Product__Carusel__Buttons">
+                    <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                      <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                      <i class="fa fa-angle-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                <div class="product__Price__Wrapper" Has__Old__Price="true">
+                  <div class="Product__New__Price">2 799 ₾</div>
+                  <div class="Product__Old__Price">2 999 ₾</div>
+                  <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                </div>
+              </div>
+              <div class="Product__Bottom__Content">
+                <button class="Buttin-Add__Cart Only__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                  <span>Add To Cart</span>
+                </button>
+
+                <div class="Product__Time__Progressbar">
+                  <div class="Time__Counter" Start__Time="1669716000" Carent__Time="1670198400">
+                    <i class="far fa-clock"></i>
+                    <span class="Time__Counter__Text" Countdown="2022/12/05 00:00" DayText="Day" HourText="Hour" MinuteText="Min">00 Day 08 Hour 46 Min</span>
+                  </div>
+                  <div class="Progressbar__Wrapper">
+                    <div class="Progressbar__Inner"></div>
+                  </div>
+                </div>
+
+                <button class="Buttin-Add__Cart Not__For__Mobile">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="Container">
+
+        <div class="Section__Header">
+          <div class="Section__Header__Left__Side">
+            <div class="Section__Header__title__Icon">
+              <i class="far fa-compass"></i>
+            </div>
+
+            <div class="Title__Wrapper">
+              <h2 class="Section__Title">Online Price</h2>
+              <span>It is possible to use the indicated price only online</span>
+            </div>
+          </div>
+          <div class="Section__Header__Right__Side">
+
+            <div class="Product__Carusel__Buttons">
+              <div class="Button-Product__Slider__Prev Button__Product__Slider">
+                <i class="fa fa-angle-left"></i>
+              </div>
+              <div class="Button-Product__Slider__Next Button__Product__Slider">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="Section__Content OnlinePrice__Product__Container swiper" Product__Slider__Wrapper>
+
+          <div class="Product__Slider__Wrapper swiper-wrapper">
+
+            <div class="Product swiper-slide">
+              <div class="Product__Block">
+                <div class="Product__Top__Content">
+
+                  <div class="Product__Label__Outside" Label__Color="Orange">
+                    <div class="Product__Label">Online Price</div>
+                  </div>
+
+                  <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                    <div class="swiper-wrapper Product__Image__Slider">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    </div>
+
+                    <div class="Product__Image__Carusel__Buttons">
+                      <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                </div>
+                <div class="Product__Bottom__Content">
+                  <div class="product__Price__Wrapper" Has__Old__Price="true">
+                    <div class="Product__New__Price">2 799 ₾</div>
+                    <div class="Product__Old__Price">2 999 ₾</div>
+                    <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                  </div>
+
+                  <div class="Product__CartCompare">
+                    <button class="Buttin-Add__Cart">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+                    <button class="Button-Product__Compare">
+                  <i class="far fa-arrow-right-arrow-left"></i>
+                </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Product swiper-slide">
+              <div class="Product__Block">
+                <div class="Product__Top__Content">
+
+                  <div class="Product__Label__Outside" Label__Color="Orange">
+                    <div class="Product__Label">Online Price</div>
+                  </div>
+
+                  <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                    <div class="swiper-wrapper Product__Image__Slider">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    </div>
+
+                    <div class="Product__Image__Carusel__Buttons">
+                      <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                </div>
+                <div class="Product__Bottom__Content">
+                  <div class="product__Price__Wrapper" Has__Old__Price="true">
+                    <div class="Product__New__Price">2 799 ₾</div>
+                    <div class="Product__Old__Price">2 999 ₾</div>
+                    <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                  </div>
+
+                  <div class="Product__CartCompare">
+                    <button class="Buttin-Add__Cart">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+                    <button class="Button-Product__Compare">
+                  <i class="far fa-arrow-right-arrow-left"></i>
+                </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Product swiper-slide">
+              <div class="Product__Block">
+                <div class="Product__Top__Content">
+
+                  <div class="Product__Label__Outside" Label__Color="Orange">
+                    <div class="Product__Label">Online Price</div>
+                  </div>
+
+                  <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                    <div class="swiper-wrapper Product__Image__Slider">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    </div>
+
+                    <div class="Product__Image__Carusel__Buttons">
+                      <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                </div>
+                <div class="Product__Bottom__Content">
+                  <div class="product__Price__Wrapper" Has__Old__Price="true">
+                    <div class="Product__New__Price">2 799 ₾</div>
+                    <div class="Product__Old__Price">2 999 ₾</div>
+                    <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                  </div>
+
+                  <div class="Product__CartCompare">
+                    <button class="Buttin-Add__Cart">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+                    <button class="Button-Product__Compare">
+                  <i class="far fa-arrow-right-arrow-left"></i>
+                </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Product swiper-slide">
+              <div class="Product__Block">
+                <div class="Product__Top__Content">
+
+                  <div class="Product__Label__Outside" Label__Color="Orange">
+                    <div class="Product__Label">Online Price</div>
+                  </div>
+
+                  <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                    <div class="swiper-wrapper Product__Image__Slider">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    </div>
+
+                    <div class="Product__Image__Carusel__Buttons">
+                      <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                </div>
+                <div class="Product__Bottom__Content">
+                  <div class="product__Price__Wrapper" Has__Old__Price="true">
+                    <div class="Product__New__Price">2 799 ₾</div>
+                    <div class="Product__Old__Price">2 999 ₾</div>
+                    <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                  </div>
+
+                  <div class="Product__CartCompare">
+                    <button class="Buttin-Add__Cart">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+                    <button class="Button-Product__Compare">
+                  <i class="far fa-arrow-right-arrow-left"></i>
+                </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Product swiper-slide">
+              <div class="Product__Block">
+                <div class="Product__Top__Content">
+
+                  <div class="Product__Label__Outside" Label__Color="Orange">
+                    <div class="Product__Label">Online Price</div>
+                  </div>
+
+                  <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                    <div class="swiper-wrapper Product__Image__Slider">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    </div>
+
+                    <div class="Product__Image__Carusel__Buttons">
+                      <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                </div>
+                <div class="Product__Bottom__Content">
+                  <div class="product__Price__Wrapper" Has__Old__Price="true">
+                    <div class="Product__New__Price">2 799 ₾</div>
+                    <div class="Product__Old__Price">2 999 ₾</div>
+                    <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                  </div>
+
+                  <div class="Product__CartCompare">
+                    <button class="Buttin-Add__Cart">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+                    <button class="Button-Product__Compare">
+                  <i class="far fa-arrow-right-arrow-left"></i>
+                </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Product swiper-slide">
+              <div class="Product__Block">
+                <div class="Product__Top__Content">
+
+                  <div class="Product__Label__Outside" Label__Color="Orange">
+                    <div class="Product__Label">Online Price</div>
+                  </div>
+
+                  <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                    <div class="swiper-wrapper Product__Image__Slider">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    </div>
+
+                    <div class="Product__Image__Carusel__Buttons">
+                      <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                </div>
+                <div class="Product__Bottom__Content">
+                  <div class="product__Price__Wrapper" Has__Old__Price="true">
+                    <div class="Product__New__Price">2 799 ₾</div>
+                    <div class="Product__Old__Price">2 999 ₾</div>
+                    <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                  </div>
+
+                  <div class="Product__CartCompare">
+                    <button class="Buttin-Add__Cart">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+                    <button class="Button-Product__Compare">
+                  <i class="far fa-arrow-right-arrow-left"></i>
+                </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Product swiper-slide">
+              <div class="Product__Block">
+                <div class="Product__Top__Content">
+
+                  <div class="Product__Label__Outside" Label__Color="Orange">
+                    <div class="Product__Label">Online Price</div>
+                  </div>
+
+                  <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                    <div class="swiper-wrapper Product__Image__Slider">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    </div>
+
+                    <div class="Product__Image__Carusel__Buttons">
+                      <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                </div>
+                <div class="Product__Bottom__Content">
+                  <div class="product__Price__Wrapper" Has__Old__Price="true">
+                    <div class="Product__New__Price">2 799 ₾</div>
+                    <div class="Product__Old__Price">2 999 ₾</div>
+                    <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                  </div>
+
+                  <div class="Product__CartCompare">
+                    <button class="Buttin-Add__Cart">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+                    <button class="Button-Product__Compare">
+                  <i class="far fa-arrow-right-arrow-left"></i>
+                </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Product swiper-slide">
+              <div class="Product__Block">
+                <div class="Product__Top__Content">
+
+                  <div class="Product__Label__Outside" Label__Color="Orange">
+                    <div class="Product__Label">Online Price</div>
+                  </div>
+
+                  <div class="swiper Product__Image__Carousel" Product__Image__Carousel>
+                    <div class="swiper-wrapper Product__Image__Slider">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                      <img class="swiper-slide" src="./assets/image/Navigation/Image-Mobile.png" alt="">
+                    </div>
+
+                    <div class="Product__Image__Carusel__Buttons">
+                      <div class="Button-Product__Image__Slider__Prev Button__Product__Slider">
+                        <i class="fa fa-angle-left"></i>
+                      </div>
+                      <div class="Button-Product__Image__Slider__Next Button__Product__Slider">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="Product__Name">Apple iPhone 14 | 128GB Starlight</h4>
+                </div>
+                <div class="Product__Bottom__Content">
+                  <div class="product__Price__Wrapper" Has__Old__Price="true">
+                    <div class="Product__New__Price">2 799 ₾</div>
+                    <div class="Product__Old__Price">2 999 ₾</div>
+                    <div class="Product__Price__In__Month">Monthly: <span>88 ₾</span> - From</div>
+                  </div>
+
+                  <div class="Product__CartCompare">
+                    <button class="Buttin-Add__Cart">
+                  <i class="far fa-cart-shopping"></i>
+                </button>
+                    <button class="Button-Product__Compare">
+                  <i class="far fa-arrow-right-arrow-left"></i>
+                </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="Container">
+
+        <div class="Section__Header">
+          <div class="Section__Header__Left__Side">
+            <div class="Section__Header__title__Icon">
+              <i class="far fa-shield-check"></i>
+            </div>
+            <h2 class="Section__Title">Manufacturers</h2>
+          </div>
+          <div class="Section__Header__Right__Side">
+
+            <div class="Product__Carusel__Buttons">
+              <div class="Button-Manufacturer__Slider__Prev Button__Product__Slider">
+                <i class="fa fa-angle-left"></i>
+              </div>
+              <div class="Button-Manufacturer__Slider__Next Button__Product__Slider">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="Section__Content Manufacturers__Container swiper" Manufacturer__Slider__Wrapper>
+
+          <div class="Manufacturer__Slider__Wrapper swiper-wrapper">
+
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-1.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-2.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-3.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-4.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-5.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-6.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-7.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-8.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-9.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-10.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-11.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-12.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-13.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-14.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-15.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-16.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-17.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-18.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-19.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-20.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-21.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-22.png" alt="">
+            </div>
+            <div class="Manufacturer swiper-slide">
+              <img src="./assets/image/Manufacturers/Manufacturer-23.png" alt="">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="Footer__Top">
+      <div class="Fotter__Content Container">
+        <div class="Left__Side">
+          <div class="Footer__Mail__Input">
+            <input type="email" placeholder="Enter your email here...">
+            <button class="Button-Newsletter__Subscribe">
+            <i class="fa fa-send"></i>
+          </button>
+          </div>
+
+          <div class="Social__Media__Iocns Not__For__Mobile">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-youtube"></a>
+          </div>
+        </div>
+        <div class="Right__Side">
+          <div class="Social__Media__Iocns Only__For__Mobile">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-youtube"></a>
+          </div>
+
+          <div class="Language__Dropdown__Wrapper">
+            <div class="Left__Side">
+              <img src="https://zoommer.ge/images/flags/us.png" alt="">
+              <span>ENG</span>
+            </div>
+            <i class="Right__Side fa fa-angle-down"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="Footer__Middle">
+      <div class="Fotter__Content Container">
+        <div class="Left__Side">
+          <ul>
+            <li class="Title">
+              <h3>Navigation</h3>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Vacancy</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="Title">
+              <h3>Payments</h3>
+            </li>
+            <li>
+              <a href="#">Payment methods</a>
+            </li>
+            <li>
+              <a href="#">Warranty</a>
+            </li>
+            <li>
+              <a href="#">Installment</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="Title">
+              <h3>Account</h3>
+            </li>
+            <li>
+              <a href="#">Online installment</a>
+            </li>
+            <li>
+              <a href="#">Return item</a>
+            </li>
+            <li>
+              <a href="#">Conditions of Use</a>
+            </li>
+          </ul>
+        </div>
+        <div class="Right__Side">
+          <div class="Title__Wrapper">
+            <h3>Contact</h3>
+            <a href="#">Branches</a>
+          </div>
+
+          <div class="Footer__Contact__Info">
+            <a href="#">
+              <i class="far fa-envelope"></i>
+              <span>info@zoommer.ge</span>
+            </a>
+            <a href="#">
+              <i class="far fa-phone"></i>
+              <span>*7007 / +995 (32) 2 60 30 60</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Footer__Bottom">
+      <div class="Footer__Content Container">
+        <div class="Footer__Copyright">Copyright © 2024 Zoommer.ge. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+
+</html>
